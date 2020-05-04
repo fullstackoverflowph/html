@@ -1,0 +1,476 @@
+/////////////////
+// Buttons     //
+/////////////////
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button;
+}
+
+.btn {
+    color: $white;
+    display: inline-block;
+    border: 1px solid $default-color;
+    background-color: $default-color;
+    padding: 0.8rem 2rem; //13px 40px;
+    text-decoration: none;
+    margin: 0 0 15px 0;
+    font-size: 0.875em;
+    font-weight: 500;
+    border-radius: 3em;
+    cursor: pointer;
+    //text-transform: uppercase;
+    @extend .transition;
+
+    &:hover {
+        border-color: #292929;
+        background-color: #292929;
+    }
+
+    //Default  
+    &.btn-default {
+        border-color: $default-color;
+        background-color: $default-color;
+        color: $white;
+
+        &:hover {
+            background-color: $default-dark-color;
+            border-color: $default-dark-color;
+            color: $white;
+        }
+
+        &.bordered {
+            border-color: $default-color;
+            background-color: $white;
+            color: $default-color;
+
+            &:hover {
+                border-color: $default-dark-color;
+                background-color: $default-dark-color;
+                color: $white;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: $default-color;
+            background-color: transparent;
+            color: $default-color;
+
+            &:hover {
+                border-color: $default-dark-color;
+                background-color: $default-dark-color;
+                color: $white;
+            }
+        }
+    }
+
+    //Primary
+    &.btn-primary {
+        border-color: $primary-color;
+        background-color: $primary-color;
+        color: $white;
+
+        &:hover {
+            border-color: $primary-dark-color;
+            background-color: $primary-dark-color;
+        }
+
+        &.bordered {
+            border-color: $primary-color;
+            background-color: $white;
+            color: $primary-color;
+
+            &:hover {
+                border-color: $color-blue-hover;
+                background-color: $color-blue-hover;
+                color: $white;
+                text-decoration: none; 
+                @extend .box-shadow-blue;
+            }
+            &:active {
+                border-color: $color-blue-hover-2;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: $primary-color;
+            background-color: transparent;
+            color: $primary-color;
+
+            &:hover {
+                border-color: $primary-dark-color;
+                background-color: $primary-dark-color;
+                color: $white;
+            }
+        }
+    }
+
+    //Secondary
+    &.btn-secondary {
+        border-color: $secondary-color;
+        background-color: $secondary-color;
+
+        &:hover {
+            border-color: $secondary-dark-color;
+            background-color: $secondary-dark-color;
+            @include boxshadow(0, 4px, 10px, 0px, rgba(245, 110, 0, 0.7));
+        }
+
+        &.bordered {
+            border-color: $secondary-color;
+            background-color: $white;
+            color: $secondary-color;
+
+            &:hover {
+                border-color: $secondary-dark-color;
+                background-color: $secondary-dark-color;
+                color: $white;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: $secondary-color;
+            background-color: transparent;
+            color: $secondary-color;
+
+            &:hover {
+                border-color: $secondary-dark-color;
+                background-color: $secondary-dark-color;
+                color: $white;
+            }
+        }
+    }
+
+    //Light
+    &.btn-light {
+        border-color: $light-color;
+        background-color: $light-color;
+        color: $font-color;
+
+        &:hover {
+            border-color: $lighter-color;
+            background-color: $lighter-color;
+        }
+
+        &.bordered {
+            border-color: $light-color;
+            background-color: $white;
+            color: $font-color;
+
+            &:hover {
+                border-color: $lighter-color;
+                background-color: $lighter-color;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: $light-color;
+            background-color: transparent;
+            color: $white;
+
+            &:hover {
+                border-color: $lighter-color;
+                background-color: $lighter-color;
+                color: $font-color;
+            }
+        }
+    }
+
+    //Dark
+    &.btn-dark {
+        border-color: $dark-color;
+        background-color: $dark-color;
+        color: $white;
+
+        &:hover {
+            border-color: $darker-color;
+            background-color: $darker-color;
+        }
+
+        &.bordered {
+            border-color: $dark-color;
+            background-color: $white;
+            color: $font-color;
+
+            &:hover {
+                border-color: $darker-color;
+                background-color: $darker-color;
+                color: $white;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: #252525;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.85);
+
+            &:hover {
+                border-color: #101010;
+                background-color: #101010;
+                color: $white;
+            }
+        }
+    }
+
+    //Link
+    &.btn-link {
+        background-color: transparent;
+        border-color: transparent;
+        color: $link-color;
+
+        &:hover {
+            color: $link-color;
+            background-color: transparent;
+            border-color: transparent;
+            text-decoration: underline;
+        }
+    }
+
+    //Danger
+    &.btn-danger {
+        border-color: $error-color;
+        background-color: $error-color;
+        color: $white;
+
+        &:hover {
+            border-color: $error-dark-color;
+            background-color: $error-dark-color;
+        }
+
+        &.bordered {
+            border-color: $error-color;
+            background-color: $white;
+            color: $error-color;
+
+            &:hover {
+                border-color: $error-dark-color;
+                background-color: $error-dark-color;
+                color: $white;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: $error-color;
+            background-color: transparent;
+            color: $error-color;
+
+            &:hover {
+                border-color: $error-dark-color;
+                background-color: $error-dark-color;
+                color: $white;
+            }
+        }
+    }
+
+    //Success
+    &.btn-success {
+        background-color: #00a652;
+        border-color: #00a652;
+        color: $white;
+
+        &:hover {
+            border-color: #00773b;
+            background-color: #00773b;
+        }
+
+        &.bordered {
+            border-color: #00a652;
+            background-color: #fff;
+            color: #00a652;
+
+            &:hover {
+                border-color: #00773b;
+                background-color: #00773b;
+                color: $white;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: #00a652;
+            background-color: transparent;
+            color: #00a652;
+
+            &:hover {
+                border-color: #00773b;
+                background-color: #00773b;
+            }
+        }
+    }
+
+    //Bordered
+    &.btn-bordered {
+        border: solid 1px $white;
+    }
+
+    //Transparent bg
+    &.btn-transparent {
+        background-color: transparent;
+        color: $white;
+    }
+
+    //Transparent white
+    &.btn-transparent-white {
+        background-color: transparent;
+        color: $white;
+        border-color: $white;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    //Light - blue
+    &.btn-light-blue {
+        border-color: $white;
+        background-color: $white;
+        color: $color-logo-liquid;
+
+        &:hover {
+            // border-color: $lighter-color;
+            // background-color: $lighter-color;
+            border-color: $color-blue-hover;
+            background-color: $color-blue-hover;
+            color: $white;
+            text-decoration: none; 
+            //@extend .box-shadow-white;
+        }
+
+        &.bordered {
+            border-color: $light-color;
+            background-color: $white;
+            color: $font-color;
+
+            &:hover {
+                border-color: $lighter-color;
+                background-color: $lighter-color;
+            }
+        }
+
+        &.bordered-transparent {
+            border-color: $light-color;
+            background-color: transparent;
+            color: $white;
+
+            &:hover {
+                border-color: $lighter-color;
+                background-color: $lighter-color;
+                color: $font-color;
+            }
+        }
+    }
+
+    //Rounded 
+    &.rounded {
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+    }
+
+    //Block
+    &.btn-block {
+        display: block;
+        width: 100%;
+    }
+
+    //Large
+    &.btn-lg {
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    //Medium
+    &.btn-md {
+        padding: .35rem .8rem;
+        font-size: .975rem;
+        line-height: 1.8;
+    }
+
+    //Small
+    &.btn-sm {
+        padding: .25rem .5rem;
+        font-size: .775rem;
+        line-height: 1.6;
+    }
+
+    //Clipboard
+    &.btn-clipboard {
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    //Selected for tooltip
+    &.selected {
+        background-color: $primary-color !important;
+        border-color: $primary-color !important;
+    }
+
+    //with icon 'after' the Text
+    &.pre-icon {
+        padding-left: 2.4rem;
+        padding-right: 1.5rem;
+
+        .icon {
+            margin-right: 10px;
+            left: 0.9rem;
+        }
+    }
+
+    //with icon 'before' the Text
+    &.post-icon {
+        padding-right: 2.4rem;
+        padding-left: 1.5rem;
+
+        .icon {
+            margin-left: 10px;
+            right: 0.9rem;
+        }
+    }
+
+    &.pre-icon,
+    &.post-icon {
+        position: relative;
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+
+            &.lg {
+                font-size: 1.5rem;
+            }
+
+            &.md {
+                font-size: 1.2rem;
+            }
+
+            &.sm {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &.btn-bordered-transparent {
+        border: solid 1px $white;
+        background-color: transparent;
+    }
+
+    &.btn-full {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+        padding: 13px 20px;
+    }
+
+    &.btn-read {
+        position: relative;
+
+        .icon {
+            @include centered-vertical();
+        }
+    }
+}

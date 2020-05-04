@@ -1,0 +1,105 @@
+/////////////////
+// Nav Menu    //
+/////////////////
+
+.nav-menu {
+    display: block;
+    padding-left: 0;
+    background-color: $light-color;
+    font-size: 0;
+    li {
+        display: inline-block;
+        font-size: $font-size-base;
+        a {
+            display: block;
+            padding: 10px 18px;
+            color: $font-color;
+            font-size: $font-size-12;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $lightest-color;
+            }
+        }
+    }
+
+    &.nav-primary {
+        background-color: $primary-color;
+
+        li {
+            >a {
+                color: $white;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $primary-dark-color;
+                }
+            }
+        }
+    }
+
+    &.nav-inline {
+        display: inline-block;
+    }
+
+    //with dropdown 
+    .with-dropdown, .menu-item-has-children {
+        position: relative;
+
+        >a {
+            position: relative;
+            padding-right: 30px;
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                right: 12px;
+                content: "\f107";
+                font-family: "Fontawesome";
+                font-weight: 600;
+
+                -webkit-transition: all .8s ease-in-out;
+                -ms-transition: all .8s ease-in-out;
+                transition: all .8s ease-in-out;
+            }
+        }
+
+        .dropdown, .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            padding-left: 0;
+            background-color: $light-color;
+            z-index: 1;
+ 
+            li {
+                display: block;
+
+                &:first-child {
+                    a {}
+                }
+            }
+        }
+
+        &:hover {
+            .dropdown, .sub-menu {
+                display: block;
+            }
+
+            >a {
+                &:before {
+                    content: "\f106";
+                }
+            }
+
+        }
+    }
+
+}

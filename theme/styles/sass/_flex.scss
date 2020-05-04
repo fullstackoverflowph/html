@@ -1,0 +1,250 @@
+$screen-size: 1440px;
+$screen-var: 1;
+
+$var-1: ($screen-size / 12); //$screen-size divided by 12 coulumns
+$var-2: ($var-1 * 2);
+$var-3: ($var-1 * 3);
+$var-4: ($var-1 * 4);
+$var-5: ($var-1 * 5);
+$var-6: ($var-1 * 6);
+$var-7: ($var-1 * 7);
+$var-8: ($var-1 * 8);
+$var-9: ($var-1 * 9);
+$var-10: ($var-1 * 10);
+$var-11: ($var-1 * 11);
+$var-12: ($var-1 * 12);
+
+.rw {
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: fluidity(-15px, $screen-width);
+    margin-left: fluidity(-15px, $screen-width);
+    //dynamic flex
+    &.cl-1 {
+        >.cl {
+            flex-basis: percentage($screen-var/1);
+            max-width: percentage($screen-var/1);
+        }
+    }
+    &>.cl-1 {
+        flex-basis: percentage($var-1/$screen-size);
+        max-width: percentage($var-1/$screen-size);
+    }
+
+    &.cl-2 {
+        >.cl { 
+            flex-basis: percentage($screen-var/2);
+            max-width: percentage($screen-var/2);
+        }
+    }
+    &>.cl-2 {
+        flex-basis: percentage($var-2/$screen-size);
+        max-width: percentage($var-2/$screen-size);
+    }
+
+    &.cl-3 {
+        >.cl {
+            flex-basis: percentage($screen-var/3);
+            max-width: percentage($screen-var/3);
+        }
+    }
+    &>.cl-3 {
+        flex-basis: percentage($var-3/$screen-size);
+        max-width: percentage($var-3/$screen-size);
+    }
+
+    &.cl-4 {
+        >.cl {
+            flex-basis: percentage($screen-var/4);
+            max-width: percentage($screen-var/4);
+        }
+    }
+    &>.cl-4 {
+        flex-basis: percentage($var-4/$screen-size);
+        max-width: percentage($var-4/$screen-size);
+    }
+
+    &.cl-5 {
+        >.cl {
+            flex-basis: percentage($screen-var/5);
+            max-width: percentage($screen-var/5);
+        }
+    }
+    &>.cl-5 {
+        flex-basis: percentage($var-5/$screen-size);
+        max-width: percentage($var-5/$screen-size);
+    }
+
+    &.cl-6 {
+        >.cl {
+            flex-basis: percentage($screen-var/6);
+            max-width: percentage($screen-var/6);
+        }
+    }
+    &>.cl-6 {
+        flex-basis: percentage($var-6/$screen-size);
+        max-width: percentage($var-6/$screen-size);
+    }
+
+    &.cl-7 {
+        >.cl {
+            flex-basis: percentage($screen-var/7);
+            max-width: percentage($screen-var/7);
+        }
+    }
+    &>.cl-7 { 
+        flex-basis: percentage($var-7/$screen-size);
+        max-width: percentage($var-7/$screen-size);
+    }
+
+    &.cl-8 {
+        >.cl {
+            flex-basis: percentage($screen-var/8);
+            max-width: percentage($screen-var/8);
+        }
+    }
+    &>.cl-8 {
+        flex-basis: percentage($var-8/$screen-size);
+        max-width: percentage($var-8/$screen-size);
+    }
+
+    &.cl-9 {
+        >.cl {
+            flex-basis: percentage($screen-var/9);
+            max-width: percentage($screen-var/9);
+        }
+    }
+    &>.cl-9 {
+        flex-basis: percentage($var-9/$screen-size);
+        max-width: percentage($var-9/$screen-size);
+    }
+
+    &.cl-10 {
+        >.cl {
+            flex-basis: percentage($screen-var/10);
+            max-width: percentage($screen-var/10);
+        }
+    }
+    &>.cl-10 {
+        flex-basis: percentage($var-10/$screen-size);
+        max-width: percentage($var-10/$screen-size);
+    }
+
+    &.cl-11 {
+        >.cl {
+            flex-basis: percentage($screen-var/11);
+            max-width: percentage($screen-var/11);
+        }
+    }
+    &>.cl-11 {
+        flex-basis: percentage($var-11/$screen-size);
+        max-width: percentage($var-11/$screen-size);
+    }
+
+    &.cl-12 {
+        >.cl {
+            flex-basis: percentage($screen-var/12);
+            max-width: percentage($screen-var/12);
+        }
+    }
+    &>.cl-12 {
+        flex-basis: percentage($var-12/$screen-size);
+        max-width: percentage($var-12/$screen-size);
+    }
+
+    >.cl {
+        display: inline-block;
+        //padding: 0 30px;
+        padding: 0 fluidity(15px, $screen-size);
+        vertical-align: top;
+        font-size: $font-size-base;
+    }
+    
+    //dynamic inline grid
+    &.inline {
+        display: block;
+        &.cl-1 {
+            >.cl {
+                width: percentage($screen-var/1);
+            }
+        }
+        &.cl-2 { 
+            >.cl {
+                width: percentage($screen-var/2);
+            }
+        }
+        &.cl-3 {
+            >.cl {
+                width: percentage($screen-var/3);
+            }
+        }
+        &.cl-4 { 
+            >.cl {
+                width: percentage($screen-var/4);
+            }
+        }
+        &.cl-5 {
+            >.cl {
+                width: percentage($screen-var/5);
+            }
+        }
+        &.cl-6 {
+            >.cl {
+                width: percentage($screen-var/6);
+            }
+        }
+        &.cl-7 {
+            >.cl {
+                width: percentage($screen-var/7);
+            }
+        }
+        &.cl-8 {
+            >.cl {
+                width: percentage($screen-var/8);
+            }
+        }
+        &.cl-9 {
+            >.cl {
+                width: percentage($screen-var/9);
+            }
+        }
+        &.cl-10 {
+            >.cl {
+                width: percentage($screen-var/10);
+            }
+        }
+        &.cl-11 {
+            >.cl {
+                width: percentage($screen-var/11);
+            }
+        }
+        &.cl-12 {
+            >.cl {
+                width: percentage($screen-var/12);
+            }
+        }
+    }
+
+    &.rw-full {
+        margin-right: fluidity(-15px, $screen-width);
+        margin-left: fluidity(-15px, $screen-width);
+    }
+
+    &.rw-cl-full {
+        &>.cl {
+            &:first-child() {
+                padding-left: 0;
+            }
+             &:last-child() {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .cl-style {
+        padding: 10px;
+        border: solid 1px rgba(0, 0, 0, 0.14);
+        text-align: center;
+    }
+}
