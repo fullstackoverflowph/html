@@ -9,7 +9,7 @@
 		"sal.js": "^0.6.1"
 	},
 	"devDependencies": {
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.27.10",
 		"grunt-contrib-cssmin": "^3.0.0",
 		"grunt-uncss": "^0.9.0",
 		"gulp": "^3.9.1",
